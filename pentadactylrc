@@ -1,0 +1,7 @@
+map -builtin h 5h
+map -builtin j 5j
+map -builtin k 5k
+map -builtin l 5l
+
+map -builtin J 2j
+map -builtin K 2k

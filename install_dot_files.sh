@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc.before tmux.conf.local vimperatorrc"    # list of files/folders to symlink in homedir
+files="vimrc.before tmux.conf.local vimperatorrc pentadactylrc"    # list of files/folders to symlink in homedir
 
 ##########
 
