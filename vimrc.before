@@ -1,4 +1,4 @@
-let mapleader = "\<space>"
+let mapleader = ","
 " Gif config
 map  / <Plug>(easymotion-sn)
 omap / <Plug>(easymotion-tn)
@@ -16,3 +16,55 @@ set foldmethod=syntax  "fold based on indent
 set foldnestmax=10      "deepest fold is 10 levels
 set nofoldenable        "dont fold by default
 set foldlevel=1         "this is just what i use
+
+"exit insertion mode
+inoremap jk <esc>
+
+"use the clipboard regster as the default register
+set clipboard=unnamed
+
+"tab manipulation
+map <D-1> 1gt
+map <D-2> 2gt
+map <D-3> 3gt
+map <D-3> 3gt
+map <D-4> 4gt
+map <D-5> 5gt
+map <D-6> 6gt
+map <D-7> 7gt
+map <D-8> 8gt
+map <D-0> :tablast<CR>
+
+map <D-S-]> gt
+map <D-S-[> gT
+
+"use a split exporer instead of a project drawer
+let NERDTreeHijackNetrw=1
+
+"open files in the same folder as the current file
+cnoremap %% <C-R>=fnameescape(expand('%:h')).'/'<cr>
+map <leader>ew :e %%
+map <leader>es :sp %%
+map <leader>ev :vsp %%
+map <leader>et :tabe %%
+
+"ctrp settings
+nnoremap <leader>f :CtrlP<CR>
+nnoremap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader>G :CtrlPBufTag<CR>
+nnoremap <leader>g :CtrlPTag<CR>
+nnoremap <leader>F :CtrlPCurWD<CR>
+nnoremap <leader>m :CtrlPMRUFiles<CR>
+nnoremap <leader>M :CtrlPMixed<CR>
+nnoremap <leader>l :CtrlPLine<CR>
+
+"vimruby settings
+set nocompatible      " We're running Vim, not Vi!
+syntax on             " Enable syntax highlighting
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins"
+
+"move out of closing braces in insertion mode
+inoremap <C-e> <C-o>A
+inoremap <C-a> <esc>^i

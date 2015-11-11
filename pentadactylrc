@@ -5,3 +5,5 @@ map -builtin l 5l
 
 map -builtin J 2j
 map -builtin K 2k
+
+inoremap jk <esc>
