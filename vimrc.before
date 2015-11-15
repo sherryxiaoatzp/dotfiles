@@ -49,14 +49,8 @@ map <leader>ev :vsp %%
 map <leader>et :tabe %%
 
 "ctrp settings
-nnoremap <leader>f :CtrlP<CR>
-nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>G :CtrlPBufTag<CR>
 nnoremap <leader>g :CtrlPTag<CR>
-nnoremap <leader>F :CtrlPCurWD<CR>
-nnoremap <leader>m :CtrlPMRUFiles<CR>
-nnoremap <leader>M :CtrlPMixed<CR>
-nnoremap <leader>l :CtrlPLine<CR>
 
 "vimruby settings
 set nocompatible      " We're running Vim, not Vi!
@@ -68,3 +62,7 @@ filetype plugin on    " Enable filetype-specific plugins"
 "move out of closing braces in insertion mode
 inoremap <C-e> <C-o>A
 inoremap <C-a> <esc>^i
+
+"ctrlp cmatch algorithm
+let g:ctrlp_match_func = {'match' : 'cpsm#CtrlPMatch' }
+let g:cpsm_query_inverting_delimiter = ' '
